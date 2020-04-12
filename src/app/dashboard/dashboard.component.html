@@ -1,0 +1,12 @@
+<div class="row row-cols-1 row-cols-md-3">
+    <div class="col mb-4" *ngFor="let book of books">
+        <div class="card">
+            <img class="card-img-top" src="{{book.imgSrc}}" title="{{book.title}}">
+            <div class="card-body">
+                <h5 class="card-title">{{book.author}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{book.title}}</h6>
+                <a class="card-link stretched-link" routerLink="/books/{{book.id}}">Details</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div *ngIf="book">
+  <h1>{{book.title | uppercase}} Details</h1>
+  <hr>
+  <dl>
+    <dt>Image</dt>
+    <dd>
+      <img src="{{book.imgSrc}}" alt="{{book.title}}" class="img-thumbnail">
+    </dd>
+    <dt>Identifier</dt>
+    <dd>{{book.id}}</dd>
+    <dt>Author</dt>
+    <dd>{{book.author}}</dd>
+    <dt>Title</dt>
+    <dd>{{book.title}}</dd>
+    <dt>Issued</dt>
+    <dd>{{book.issued}}</dd>
+  </dl>
+  <button type="button" class="btn btn-secondary mr-2" routerLink="./edit">Edit</button>
+  <button type="button" class="btn btn-danger" (click)="openDeleteModal(book)">Delete</button>
+</div>
